@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 const FavIndicator = () => {
     const navigate = useNavigate()
-  
+    
 
     const favLength = useSelector((state) => {
       return state.favoriti.content.length
@@ -16,8 +16,8 @@ const FavIndicator = () => {
           onClick={() => navigate('/favourites/:company')}
           className="d-flex align-items-center"
         >
-            <p>favoriti:</p>
-          <span className="ms-2">{favLength}</span>
+            <p className="m-0">Preferiti: <span className="ms-2">{favLength}</span></p>
+          
         </Button>
       </div>
     )

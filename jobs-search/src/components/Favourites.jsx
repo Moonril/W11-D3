@@ -1,6 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap"
 import { FaTrash } from "react-icons/fa"
 import { useDispatch, useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 const Favourites = function () {
 
@@ -16,6 +17,7 @@ const Favourites = function () {
       <Row>
         <Col className="my-3">
           <h1 className="display-4">Your favourites</h1>
+          <Link to={'/'}>Home</Link>
           <ul style={{ listStyle: 'none' }}>
                 {favourites.map((fav, i) => {
                     return (
